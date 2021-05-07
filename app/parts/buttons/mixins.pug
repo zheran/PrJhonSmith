@@ -1,0 +1,31 @@
+mixins 
+
+    mixin pet(name)
+     li.pet= name
+
+    mixin list
+     ul
+         li foo
+         li bar
+         li baz
+
+    mixin buttons(text, textcolor, colorb, border, bordercolor, cla, n)
+             
+     style
+        |.
+        = n
+        | {
+        |background-color: 
+        = colorb
+        |;
+        |border: 
+        = border
+        |pt solid 
+        = bordercolor
+        |;
+        |color: 
+        = textcolor
+        |;
+        |}
+        
+     input(type="button" class= cla+n value= text)    

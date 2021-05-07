@@ -1,0 +1,14 @@
+div
+    include mixins.pug
+    style 
+        include title.scss
+        
+  
+    div(class='hh2 p2') 
+         | HELLO WWW
+    ul
+        +pet('cat')
+        +pet('dog')
+        +pet('pig')
+    +list
+    +buttons("ghhhj", "red", "green", 2, "blue")

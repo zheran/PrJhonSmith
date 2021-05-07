@@ -1,0 +1,25 @@
+hh2 {
+    font-weight: bold;
+    font-size: 105px;
+    line-height: 90%;
+}
+.p2 {
+    text-align: center;
+    /* margin-left: 42%; */
+    margin-right: auto;
+    padding: 25% 0;
+}
+.butt:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: black;
+    border-radius: 4px;
+}
+.butt {
+    padding: 8px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
