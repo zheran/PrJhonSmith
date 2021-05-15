@@ -10,37 +10,27 @@ const pug = require('gulp-pug');
 
 // Sass Task
 function scssTask() {
-    return src('app/scss/style.scss')
+    return src(['app/scss/style.scss', 'app/**/*.scss', 'app/**/**/*.scss', 'app/**/**/**/*.scss'])
         .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(concat('style.css'))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 version']
         }))
-        .pipe(dest('app/css'));
+        .pipe(dest('dest/css'));
 }
 
 //Pug Task
 function pugTask() {
-    return src('app/pages/*.pug')
+    return src(['app/pages/*.pug'])
         .pipe(pug({ pretty: true }))
         .pipe(dest('dest/'));
 }
 
-//Html Task
-function htmlTask() {
-    return src('app/index.html')
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: '@root',
-        }
-        ))
-        .on('error', function () { notify('HTML include error'); })
-        .pipe(dest('dest/'));
-}
 // Browsersync Tasks
 function browsersyncServe(cb) {
     browsersync.init({
         server: {
-            baseDir: 'app'
+            baseDir: 'dest'
         }
     });
     cb();
@@ -53,16 +43,14 @@ function browsersyncReload(cb) {
 
 // Watch Task
 function watchTask() {
-    watch('app/*.html', browsersyncReload);
-    watch(['app/scss/**/*.scss'], series(scssTask, browsersyncReload));
+    watch('dest/*.html', browsersyncReload);
+    watch(['app/scss/style.scss', 'app/**/*.scss', 'app/**/**/*.scss', 'app/**/**/**/*.scss', 'app/blocks/**/*.pug', 'app/blocks/**/**/*.pug'], series(scssTask, pugTask, browsersyncReload));
 }
 
 // Default Gulp task
 exports.default = series(
     pugTask,
-    // htmlTask,
     scssTask,
     browsersyncServe,
     watchTask
 );
-exports.pugTask = pugTask;

@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\blocks",
+    "\\app\\css",
+    "\\app\\pages",
+    "\\app\\parts",
+    "\\app\\parts\\buttons",
+    "\\app\\scss",
+    "\\dest"
+  ],
+  "SelectedNode": "\\app\\scss\\style.scss",
+  "PreviewInSolutionExplorer": false
+}

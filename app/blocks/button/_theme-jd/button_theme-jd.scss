@@ -1,0 +1,17 @@
+.button {
+    &_themejd {
+        background-color: red;
+        border: none;
+        color: #fe6192;        
+    }
+
+    &_download-link {
+        background-color: #443a8b;
+        border: 2pt solid #443a8b;
+        color: white;
+        text-decoration: none;
+    }
+    &_bordered {
+            border: 2pt solid #fe6192;
+        }
+}

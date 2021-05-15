@@ -36,21 +36,21 @@ header {
     height: 3865px;
 }
 
-.top {
+/*.top {
     clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 15vw), 0% 100%);
     margin-bottom: -16%;
     padding-bottom: 5%;
-}
+}*/
 
 .contact {
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
 }
 
-.vertical_text {
+/*.vertical_text {
     writing-mode: tb-rl;
     transform: rotate(180deg);
 }
-
+*/
 .bold {
     font-weight: bold;
 }

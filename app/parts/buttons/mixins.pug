@@ -9,23 +9,13 @@ mixins
          li bar
          li baz
 
-    mixin buttons(text, textcolor, colorb, border, bordercolor, cla, n)
-             
-     style
-        |.
-        = n
-        | {
-        |background-color: 
-        = colorb
-        |;
-        |border: 
-        = border
-        |pt solid 
-        = bordercolor
-        |;
-        |color: 
-        = textcolor
-        |;
-        |}
-        
-     input(type="button" class= cla+n value= text)    
+     mixin list(id, ...items)
+        ul(id=id)
+             each item in items
+                 li= item
+
++list('my-list', 1, 2, 3, 4)
+
+// class="butt n1" 
+  mixin button(text, ...items)
+     input(class!=attributes.class type="button" class=...items value=text)    
