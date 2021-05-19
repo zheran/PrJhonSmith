@@ -1,3 +1,4 @@
+@import "_variables";
 html, body {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
@@ -11,60 +12,49 @@ header {
 }
 
 .top, .process, .contact, footer {
-    background-color: #443a8b;
+    background-color: $main_color;
 }
 
 .hello, .profile {
-    background-color: #f7f7f7;
+    background-color: $color_grey;
 }
 
 .mywork, .myblog, .clients {
-    background-color: #fff;
+    background-color: $color_white;
 }
 
-.top, .process, .myblog, .profile, .clients, .contact, footer {
-    height: 1225px;
+.top, .myblog, .clients, .contact, footer {
+    height: $blok_height1;
 }
 
-.hello, .profile, .process {
-    height: 2224px;
+.profile, .process {
+    height: $blok_height2;
     clip-path: polygon(0 7%, calc(100%) 0, 100% 100%, 0 calc(100% - 15vw));
     padding-top: 25%;
 }
 
 .mywork {
-    height: 3865px;
+    height: $blok_height3;
 }
-
-/*.top {
-    clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 15vw), 0% 100%);
-    margin-bottom: -16%;
-    padding-bottom: 5%;
-}*/
 
 .contact {
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
 }
 
-/*.vertical_text {
-    writing-mode: tb-rl;
-    transform: rotate(180deg);
-}
-*/
 .bold {
     font-weight: bold;
 }
 
 .pinc {
-    color: #fe6192;
+    color: $color_pink;
 }
 
 .white {
-    color: #ffffff;
+    color: $color_white;
 }
 
 .gray {
-    color: #b2b2b8;
+    color: $color_text_grey;
 }
 
 hh3 {
@@ -129,15 +119,23 @@ hh1 {
     font-size: 32px;
 }
 
+.red_line {
+    border-bottom: 2px solid;
+    border-bottom-color: red;
+    height: 10px;
+    margin-left: 25%;
+    margin-right: 68%;
+}
+
 .article {
     width: 1300px;
     margin: 0 auto;
 }
 
 
-.content {
-    width: 300px;
-}
+//.content {
+    //width: 300px;
+//}
 
 .left .content {
     text-align: right;

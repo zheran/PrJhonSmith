@@ -1,0 +1,68 @@
+@import "./../scss/_variables";
+
+@mixin articles_fon($weight, $hight, $text_position) {
+    background-color: $color_dark_grey;
+
+    @if $text_position == "left" {
+        margin-left: 45%;
+    }
+    @else {
+        @if $text_position == "right" {
+            margin-left: 15%;
+        }
+    }
+
+    margin-top: 5%;
+    padding-bottom: $hight;
+    clip-path: polygon(0px 0px, $weight 0px, $weight $hight, 0px $hight);
+
+}
+
+@mixin content($size, $color, $top, $text_al, $text_left) {
+    font-size: $size;
+    font-weight: bold;
+    color: $color;
+    margin-left: $text_left;
+    text-align: $text_al;
+    padding-top: $top;
+    margin-right: 40%;
+}
+
+
+.articles_left {
+    @include articles_fon(600px, 400px, 'left');
+}
+.articles_right {
+    @include articles_fon(600px, 400px, 'right');
+}
+
+.content1 {
+    @include content(26px, $color_text_grey, 5%, left, 540px);
+}
+
+.right .articles {
+    margin-left: 15%;
+}
+
+.content_title {
+    font-size: 26px;
+    font-weight: bold;
+    color: $color_text_grey;
+    margin-left: 540px;
+    padding-top: 5%;
+    text-align: left;
+    margin-right: 40%;
+    //position: relative;
+}
+
+.content_normal {
+    font-size: 10px;
+    font-weight: bold;
+    color: $color_text_grey;
+    margin-left: 35%;
+    padding-top: 1%;
+    text-align: left;
+    margin-right: 40%;
+    z-index: 11;
+    //position: relative;
+}

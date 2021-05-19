@@ -1,3 +1,5 @@
+@import "./../../scss/_variables";
+
 .vertical_text {
     writing-mode: tb-rl;
     transform: rotate(180deg);
@@ -6,4 +8,26 @@
     clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 15vw), 0% 100%);
     margin-bottom: -16%;
     padding-bottom: 5%;
+    height: $blok_height1;
+}
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: $color_pink;
+    padding: 15px 10px;
+    border-radius: 59% 37% 32% 64% / 56% 37% 37% 36%;
+}
+.toolbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 100px 20px;
+}
+.menu {
+    background-color: $color_white;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 11%, 0% 11%, 0% 27%, 100% 27%, 100% 36%, 0% 36%, 0% 52%, 100% 52%, 100% 63%, 0% 63%);
+    margin-left: 80%;
+    padding: 15px 10px;
 }

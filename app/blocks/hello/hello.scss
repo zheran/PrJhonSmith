@@ -1,12 +1,6 @@
-hh2 {
-    font-weight: bold;
-    font-size: 105px;
-    line-height: 90%;
-}
-
-.p2 {
-    text-align: center;
-    /* margin-left: 42%; */
-    margin-right: auto;
-    padding: 25% 0;
+@import "./../../scss/_variables";
+.hello {
+    height: $blok_height2;
+    clip-path: polygon(0 7%, calc(100%) 0, 100% 100%, 0 calc(100% - 15vw));
+    padding-top: 25%;
 }
