@@ -14,11 +14,12 @@
 
     margin-top: 5%;
     padding-bottom: $hight;
-    clip-path: polygon(0px 0px, $weight 0px, $weight $hight, 0px $hight);
+
+   
 
 }
 
-@mixin content($size, $color, $top, $text_al, $text_left) {
+ @mixin content($size, $color, $top, $text_al, $text_left) {
     font-size: $size;
     font-weight: bold;
     color: $color;
@@ -65,4 +66,43 @@
     margin-right: 40%;
     z-index: 11;
     //position: relative;
+}
+
+
+.articles {
+    display: flex;
+    justify-content: normal;
+
+    &_right {
+        flex-direction: row;
+    }
+
+    &_left {
+        flex-direction: row-reverse;
+    }
+
+    &__content {
+        font-size: 10px;
+        font-weight: bold;
+        color: $color_text_grey;
+        margin-left: 35%;
+        padding-top: 1%;
+        text-align: left;
+        margin-right: 40%;
+        z-index: 11;
+    }
+
+    &__title {
+        font-size: 26px;
+        font-weight: bold;
+        color: $color_text_grey;
+        margin-left: 540px;
+        padding-top: 5%;
+        text-align: left;
+        margin-right: 40%;
+    }
+
+    &__picture {
+        background-color: $color_dark_grey;
+    }
 }
