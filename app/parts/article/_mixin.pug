@@ -1,0 +1,18 @@
+include ../link/link
+mixin article(data, style, dir)
+    if (style === 'profile')
+        article.article.article_style_profile#article_style_profile
+            img(src= 'https://picsum.photos/490/490' width= 490 height= 490).article__picture
+            .article__content
+                h3.article__title= !data.title ? 'Empty title' : data.title
+                p.article__text= !data.text ? 'Empty text' : data.text
+                +link(data.link)
+                .line
+    else
+        article.article.article_style_list
+            img(src= 'https://picsum.photos/490/490' width= 490 height= 490).article__picture
+            .article__content
+                h3.article__title= !data.title ? 'Empty title' : data.title
+                p.article__text= !data.text ? 'Empty text' : data.text
+                +link(data.link)
+                .line

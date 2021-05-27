@@ -1,0 +1,6 @@
+.text-banner {
+  &_vertical {
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+  }
+}

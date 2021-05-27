@@ -8,32 +8,44 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,200&amp;family=Playfair+Display&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&amp;display=swap" rel="stylesheet">
   </head>
   <body>      
-    <section class="top">
-      <header>
-        <div class="toolbar">
-          <!--( style="position: fixed; margin-top: 100px; margin-left: 7%;")--><a class="logo" href="/">
-            <!--    img(src="./../app/images/1me.png" alt="me")-->.me</a><a class="menu">....   </a>
+    <header class="top">
+      <div class="wrapper">
+        <div class="toolbar"><a class="logo" href="/">.me</a>
+          <nav class="menu"></nav>
         </div>
-      </header>
-      <div>
-        <div style="position: fixed; margin-top: 100px; margin-left: 89%;"><img src="./../app/images/2lines.png" alt="menu"></div>
-        <div style="position: absolute; margin-top: 16%; margin-left: 72%;"><img src="./../app/images/3waves.png"></div>
-        <div style="position: absolute; margin-top: 37%; margin-left: 71%;"><img src="./../app/images/4.png"></div>
-        <div style="position: absolute; margin-top: 35%; margin-left: 31%;"><img src="./../app/images/5.png"></div>
+        <!--div( style="position: fixed; margin-top: 100px; margin-left: 89%;")-->
+        <!--    img(src="./../app/images/2lines.png" alt="menu")-->
+        <!---->
+        <!--div( style="position: absolute; margin-top: 16%; margin-left: 72%;")-->
+        <!--    img(src="./../app/images/3waves.png")-->
+        <!---->
+        <!--div( style="position: absolute; margin-top: 37%; margin-left: 71%;")-->
+        <!--    img(src="./../app/images/4.png")-->
+        <!---->
+        <!--div( style="position: absolute; margin-top: 35%; margin-left: 31%;")-->
+        <!--    img(src="./../app/images/5.png")-->
+        <div class="text-banner text-banner_vertical">
+          <div class="text_white">JHON</div>
+          <div class="text_white">SMITH</div>
+          <div class="text_pinc">UI/UX Designer & Art Director</div>
+        </div>
       </div>
-      <div class="vertical_text p1 white">
-        <hh3>JHON </hh3><br>
-        <hh1>SMITH</hh1><br>
-        <p class="pinc text_n">UI/UX Designer & Art director	 </p>
+    </header>
+    <section class="hello">
+      <div class="wrapper">
+            <h2 class="block-title">hello<span>who am i</span></h2>
+        <!--+article(data, 'profile')-->
       </div>
     </section>
-    <section class="hello"> 
-      <div class="vl">
-         &nbsp; &nbsp; who am i</div>
-      <div class="hh2 p2" style=" padding-top: 0px; padding-bottom: 0px;">HELLO</div><img class="articles__picture" src="simpl.jpg" alt="image" title="img" width="600px" hight="600px">
+    <section class="mywork">
+      <div class="wrapper">
+            <h2 class="block-title">my work<span>awesome projects</span></h2>
+      </div>
     </section>
+    <script src="/js/main.js"></script>
   </body>
 </html>

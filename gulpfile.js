@@ -7,10 +7,11 @@ const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const fileinclude = require('gulp-file-include');
 const pug = require('gulp-pug');
+const uglify = require('gulp-uglify');
 
 // Sass Task
 function scssTask() {
-    return src(['app/scss/style.scss', 'app/**/*.scss', 'app/**/**/*.scss', 'app/**/**/**/*.scss'])
+    return src(['app/**/*.scss', 'app/**/**/*.scss', 'app/**/**/**/*.scss',])
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(concat('style.css'))
         .pipe(autoprefixer({
@@ -24,6 +25,13 @@ function pugTask() {
     return src(['app/pages/*.pug'])
         .pipe(pug({ pretty: true }))
         .pipe(dest('dest/'));
+}
+
+//JS Task
+function jsTask() {
+    return src(['app/**/*.js', 'app/**/**/*.js', 'app/**/**/**/*.js',])
+        .pipe(uglify())
+        .pipe(dest('dest/'))
 }
 
 // Browsersync Tasks
@@ -44,13 +52,14 @@ function browsersyncReload(cb) {
 // Watch Task
 function watchTask() {
     watch('dest/*.html', browsersyncReload);
-    watch(['app/scss/style.scss', 'app/**/*.scss', 'app/**/**/*.scss', 'app/**/**/**/*.scss', 'app/blocks/**/*.pug', 'app/blocks/**/**/*.pug'], series(scssTask, pugTask, browsersyncReload));
+    watch(['app/**/**/**/*.scss', 'app/**/**/**/*.js', 'app/**/**/*.pug'], series(scssTask, pugTask, jsTask, browsersyncReload));
 }
 
 // Default Gulp task
 exports.default = series(
     pugTask,
     scssTask,
+    jsTask,
     browsersyncServe,
     watchTask
 );

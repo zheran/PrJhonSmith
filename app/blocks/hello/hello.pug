@@ -1,4 +1,6 @@
-section( class="hello")  
-    include texthello
-    include articles__picture
-
+include ../../parts/block-title/block-title
+section.hello
+    .wrapper
+        +block-title({"title":"hello", "text":"who am i"})
+        include ../../parts/block-title/block-title
+        include ../../parts/article/article

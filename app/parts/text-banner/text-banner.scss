@@ -1,0 +1,49 @@
+@import "../../scss/_variables";
+.text-banner {
+  width: 240px;
+  height: 440px;
+  margin: 0 auto;
+  div{
+    &:nth-child(1){
+      margin-right: -7px;
+      margin-top: 14px;
+      font-weight: bold;
+      font-size: 76px;
+      line-height: 70px;
+      letter-spacing: 2px;
+    }
+    &:nth-child(2){
+      font-weight: bold;
+      font-size: 126px;
+      line-height: 112px;
+      letter-spacing: 5px;
+    }
+    &:nth-child(3){
+      margin-top: 16px;
+      font-size: 24px;
+      line-height: 38px;
+    }
+  }
+}
+
+
+hh3 {
+}
+
+hh2 {
+  font-weight: bold;
+  font-size: 105px;
+  line-height: 90%;
+}
+
+hh1 {
+
+}
+
+
+
+.text_n {
+
+}
+
+

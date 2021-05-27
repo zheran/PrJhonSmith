@@ -1,0 +1,28 @@
+@import "./../../scss/_variables";
+.toolbar {
+  padding: 78px 20px 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: $color_pink;
+    padding: 12px 7px;
+    border-radius: 58% 42% 43% 57% / 55% 50% 50% 45%;
+  }
+  .menu{
+    height: 17px;
+    width: 21px;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    background-size: 100% 2px, 100% 2px, 100% 2px;
+    background-position: top, center, bottom;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+}
