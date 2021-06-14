@@ -1,0 +1,84 @@
+.shape {
+    //background-color: rgb(254, 97, 146);
+    fill: rgb(254, 97, 146);
+    position: absolute;
+    width: 92px;
+    height: 65px;
+
+    &_w1 {
+        left: 616px;
+        top: 698px;
+        z-index: 392;
+    }
+
+    &_w2 {
+        left: 1592px;
+        top: 14088px;
+        z-index: 7;
+    }
+
+    &_w3 {
+        left: 692px;
+        top: 1088px;
+        z-index: 7;
+    }
+}
+
+.shapes3 {
+    //background-color: rgb(35, 145, 238);
+    fill: rgb(35, 145, 238);
+    position: absolute;
+    width: 109px;
+    height: 68px;
+
+    &_ws1 {
+        left: 1295px;
+        top: 409px;
+        z-index: 394;
+    }
+
+    &_ws2 {
+        left: 1638px;
+        top: 6252px;
+        z-index: 237;
+    }
+
+    &_ws3 {
+        left: 93px;
+        top: 4371px;
+        z-index: 284;
+    }
+
+    &_ws4 {
+        left: 1812px;
+        top: 10776px;
+        z-index: 85;
+    }
+
+    &_ws5 {
+        left: 378px;
+        top: 14088px;
+        z-index: 9;
+    }
+}
+.shapes {
+    background-image: url("../images/Shape.png");
+    background-repeat: no-repeat;
+    width: 92px;
+    height: 65px;
+    border: 2px;
+
+    &.first-w {
+        background-position: 0 0;
+
+        &:hover {
+            background-position: -92px 0;
+        }
+    }
+
+    &.second-w {
+        background-position: 0 -65px;
+    }
+}
+
+
